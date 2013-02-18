@@ -227,7 +227,7 @@ module.exports = function (grunt) {
         },
         bower: {
             rjsConfig: 'app/assets/javascripts/main.js',
-            indent: '    '
+            indent: '  '
         }
     });
 
