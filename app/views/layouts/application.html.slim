@@ -16,14 +16,15 @@ html.no-js lang="en"
   		.inner-section-main
 
   	#main role="main"
-  	  section.main
-    		.inner-section-main
+  	  section.page.container-fluid data-page="home" data-url=""
+          .row-fluid
+            .span2 data-view="view-name" data-model="model-name"
+            .span10 data-view="view-name" data-model="model-name"
+
+        section.main
     		  = yield
 
-  	  aside
-  		  .inner-aside-main
-
   	footer
-  	  .inner-footer '&copy; Company., 2011.  All rights reserved.  &copy; All rights reserved.
+  	  .inner-footer
 
   	= javascript_include_tag "application.js"
