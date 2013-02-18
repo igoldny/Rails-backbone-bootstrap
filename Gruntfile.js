@@ -122,7 +122,7 @@ module.exports = function (grunt) {
                 imagesDir: '<%= yeoman.app %>/images',
                 javascriptsDir: '<%= yeoman.app %>/assets/javascripts',
                 fontsDir: '<%= yeoman.app %>/assets/stylesheets/fonts',
-                importPath: 'app/components',
+                importPath: 'app/assets/stylesheets',
                 relativeAssets: true
             },
             dist: {},
@@ -143,6 +143,9 @@ module.exports = function (grunt) {
                 options: {
                     // `name` and `out` is set by grunt-usemin
                     baseUrl: 'app/assets/javascripts',
+                    out: 'app/assets/javascripts/application.js',
+                    name: 'app/assets/javascripts/application.js',
+                    module: 'app/assets/javascripts/application.js',
                     optimize: 'none',
                     // TODO: Figure out how to make sourcemaps work with grunt-usemin
                     // https://github.com/yeoman/grunt-usemin/issues/30
