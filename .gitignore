@@ -5,3 +5,4 @@ dist
 app/assets/javascripts/vendor/
 log/
 tmp/
+db/
