@@ -3,3 +3,5 @@ temp
 dist
 .sass-cache
 app/assets/javascripts/vendor/
+log/
+tmp/
