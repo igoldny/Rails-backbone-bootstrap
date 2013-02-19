@@ -1,6 +1,7 @@
 #= require ./vendor/jquery/jquery.js
 #= require ./vendor/lodash/lodash.js
 #= require ./vendor/backbone/backbone.js
+#= require_tree ./helpers
 
 #= require_self
 #= require_tree ./templates
@@ -13,3 +14,4 @@ window.FTBPro =
   Collections: {}
   Routers: {}
   Views: {}
+  Layout: $('#main').layout()
