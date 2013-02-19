@@ -12,6 +12,8 @@ group :assets do
 end
 
 group :test, :development do
-  gem 'konacha'
   gem 'poltergeist'
+  gem 'rb-fsevent'
+  gem 'konacha'
+  gem 'guard-konacha'
 end
