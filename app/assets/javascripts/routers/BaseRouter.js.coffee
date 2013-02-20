@@ -13,7 +13,7 @@ class FTBPro.Routers.Application extends Backbone.Router
         @loadLayoutsWithModels(page.views).slidePage(page.name)
 
   loadLayoutsWithModels: (pageViews) ->
-    @renderWithModelsFor pageViews, @aggregateRequests(pageViews), (view, model) ->
+    @renderWithModelsFor pageViews, @aggregateRequests(pageViews), (view, model) =>
       @views[view].render(model)
     return this
 
@@ -31,9 +31,11 @@ class FTBPro.Routers.Application extends Backbone.Router
 
   aggregateRequests: (pageViews)->
     @views = {}
-    _.map pageViews, (view) ->
-      views[view.name] = new FTBPro.Views[view.name]()
-      views[view.name].getRequest()
+    request = {}
+    _.map pageViews, (view) =>
+      @views[view.name] = new FTBPro.Views[view.name]
+      request[view.model] = @views[view.name].getRequest()
+    request
 
   slidePage: (page) ->
     $page = $("[data-page=#{page}]")

@@ -24,4 +24,5 @@ $ ->
     overlay: $('#overlay')
     loading: $('#loading')
   })
+
   Backbone.history.start({pushState: true})
