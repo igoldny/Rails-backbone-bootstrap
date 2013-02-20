@@ -12,38 +12,31 @@ class FTBPro.Routers.Application extends Backbone.Router
       @route page.url, page.name, =>
         @loadLayoutsWithModels(page.views).slidePage(page.name)
 
-  loadLayoutsWithModels: (options) ->
-    allModels = []
-    existingModels = []
-
-    # unsubscribe Refresh
-    DataSource.unsubscribeRefresh()
-    @viewsList = []
-
-    _.each options.layouts, (widget) =>
-      opts = $.extend(true, {}, options)
-      allModels.push(widget.model) if widget.model #save each model
-
-      # save the models that we have
-      # to remove them from the future list
-      # and the one we have in cache load
-      existingModels.push DataSource.getModel widget.model, widget.expires, (modelData)->
-        opts.modelName = widget.model
-        opts.data = modelData
-        @viewsList.push @renderPageOrView(widget, opts)
-
-    # get the missing models from the server
-    # and after we get the data load the widgets with the data
-    DataSource.getMissingModels(allModels, existingModels)
+  loadLayoutsWithModels: (pageViews) ->
+    @renderWithModelsFor pageViews, @aggregateRequests(pageViews), (view, model) ->
+      @views[view].render(model)
     return this
 
-  renderPageOrView: (widget, options) ->
-    if widget.page
-      new Views[widget.page][widget.view](opts)
-    else
-      new Views[widget.view](opts)
+  renderWithModelsFor: (pageViews, request, callback) ->
+    $.ajax({
+      url: '/pipe',
+      data: request,
+      cache: false,
+    }).success((data) ->
+      _.each pageViews, (view) ->
+        callback(view.name, data[view.model]) if callback
+    ).error((jqXHR, textStatus, errorThrown) ->
+      throw errorThrown if jqXHR.status
+    )
 
-  slidePage: ($page) ->
+  aggregateRequests: (pageViews)->
+    @views = {}
+    _.map pageViews, (view) ->
+      views[view.name] = new FTBPro.Views[view.name]()
+      views[view.name].getRequest()
+
+  slidePage: (page) ->
+    $page = $("[data-page=#{page}]")
     $visiblePage = $('.page:visible')
     if $visiblePage.length > 0
       $visiblePage.fadeOut "fast", ->

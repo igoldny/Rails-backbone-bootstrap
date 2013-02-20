@@ -8,11 +8,11 @@ $.fn.layout = () ->
 
     $page.find('[data-view]').each (i, view) ->
       $view = $(view)
-      viewName = $view.data('view')
+      name = $view.data('view')
       model = $view.data('model')
       views.push {
         model: model
-        view: viewName
+        name: name
       }
 
       layout[pageName] =

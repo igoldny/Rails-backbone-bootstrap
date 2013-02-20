@@ -14,9 +14,9 @@ window.FTBPro =
   Collections: {}
   Routers: {}
   Views: {}
-  Layouts: $('#main').layout()
+  Helpers: {}
   Application: {}
-
+  Layouts: $('#main').layout()
 
 $ ->
   window.FTBPro.Application = new FTBPro.Routers.Application({
