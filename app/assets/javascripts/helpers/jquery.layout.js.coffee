@@ -16,6 +16,7 @@ $.fn.layout = () ->
       }
 
       layout[pageName] =
+        name: pageName
         url: url
         views: views
 

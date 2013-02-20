@@ -14,4 +14,14 @@ window.FTBPro =
   Collections: {}
   Routers: {}
   Views: {}
-  Layout: $('#main').layout()
+  Layouts: $('#main').layout()
+  Application: {}
+
+
+$ ->
+  window.FTBPro.Application = new FTBPro.Routers.Application({
+    container: $('#container')
+    overlay: $('#overlay')
+    loading: $('#loading')
+  })
+  Backbone.history.start({pushState: true})
