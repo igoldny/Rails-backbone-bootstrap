@@ -1,4 +1,5 @@
 class FTBPro.Views.view2 extends Backbone.View
+  template: JST["templates/view2"]
   el: $('[data-view=view2]')
 
   initialize: ->
@@ -10,4 +11,7 @@ class FTBPro.Views.view2 extends Backbone.View
 
   render: () ->
     console.log 'render'
-
+    data =
+      title: 'view2 title'
+      text: 'view2 text'
+    this.$el.html(@template(data))

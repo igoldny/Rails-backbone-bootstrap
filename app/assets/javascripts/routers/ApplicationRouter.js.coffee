@@ -2,9 +2,6 @@ class FTBPro.Routers.Application extends Backbone.Router
   routes: {}
 
   initialize: (options) ->
-    @container = options.container
-    @overlay = options.overlay
-    @loading = options.loading
     @renderLayout()
 
   renderLayout: ->

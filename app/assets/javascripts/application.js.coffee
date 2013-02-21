@@ -1,6 +1,7 @@
 #= require ./vendor/jquery/jquery.js
 #= require ./vendor/lodash/lodash.js
 #= require ./vendor/backbone/backbone.js
+#= require handlebars
 #= require_tree ./helpers
 
 #= require_self
@@ -19,10 +20,5 @@ window.FTBPro =
   Layouts: $('#main').layout()
 
 $ ->
-  window.FTBPro.Application = new FTBPro.Routers.Application({
-    container: $('#container')
-    overlay: $('#overlay')
-    loading: $('#loading')
-  })
-
+  window.FTBPro.Application = new FTBPro.Routers.Application
   Backbone.history.start({pushState: true})
