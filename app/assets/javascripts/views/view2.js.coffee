@@ -4,14 +4,13 @@ class FTBPro.Views.view2 extends Backbone.View
 
   initialize: ->
     console.log 'initialize'
+    _.bindAll this
 
   getRequest: ->
     console.log 'getRequest'
     {id: 2}
 
-  render: () ->
+  render: (data) ->
     console.log 'render'
-    data =
-      title: 'view2 title'
-      text: 'view2 text'
-    this.$el.html(@template(data))
+    @model = new FTBPro.Models['model2'](data)
+    this.$el.html(@template(@model.toJSON(data)))

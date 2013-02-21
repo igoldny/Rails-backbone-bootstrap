@@ -9,9 +9,7 @@ class FTBPro.Views.view1 extends Backbone.View
     console.log 'getRequest'
     {id: 1}
 
-  render: () ->
+  render: (data) ->
     console.log 'render'
-    data =
-      title: 'view1 title'
-      text: 'view1 text'
-    this.$el.html(@template(data))
+    @model = new FTBPro.Models['model1'](data)
+    this.$el.html(@template(@model.toJSON(data)))
