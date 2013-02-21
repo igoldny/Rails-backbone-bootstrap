@@ -1,0 +1,12 @@
+{
+  "name": "ftbpro",
+  "version": "0.0.0",
+  "dependencies": {
+    "sass-bootstrap": "*",
+    "modernizr": "*",
+    "jquery": "*",
+    "backbone": "*",
+    "lodash": "*"
+  },
+  "devDependencies": {}
+}
