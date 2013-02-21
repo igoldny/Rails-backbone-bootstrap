@@ -18,3 +18,16 @@ group :test, :development do
   gem 'konacha'
   gem 'guard-konacha'
 end
+
+group :develoment do
+  gem 'rspec-rails'
+  gem 'guard'
+  gem 'guard-rspec'
+end
+
+group :test do
+  gem 'rspec'
+  gem 'growl'
+  gem 'spork-rails'
+  gem 'guard-spork'
+end
