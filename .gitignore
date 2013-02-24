@@ -7,3 +7,4 @@ app/assets/javascripts/vendor/
 log/
 tmp/
 db/
+.DS_Store
