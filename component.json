@@ -2,6 +2,11 @@
   "name": "ftbpro",
   "version": "0.0.0",
   "dependencies": {
+    "chai": "*",
+    "chai-jquery": "*",
+    "chai-backbone": "*",
+    "sinon-chai": "*",
+    "sinon": "*",
     "sass-bootstrap": "*",
     "modernizr": "*",
     "jquery": "*",
