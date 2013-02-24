@@ -1,3 +1,8 @@
+#= require support/chai/chai.js
+#= require support/sinon-chai/lib/sinon-chai.js
+#= require support/sinon/lib/sinon.js
+
+####################################################################################################
 # You can require javascript files here. A good place to start is by requiring your application.js.
 # require application
 #
@@ -23,3 +28,5 @@
 # the configuration and use this file as a manifest.
 #
 # For more information: http://github.com/modeset/teabag
+####################################################################################################
+chai.should()
