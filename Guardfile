@@ -4,7 +4,7 @@ guard :konacha, :driver => :poltergeist, :port => 5050 do
   watch(%r{^spec/javascripts/.+_spec(\.js|\.js\.coffee)$})
 end
 
-guard 'rspec' do
+guard 'rspec', :cli => "--color --drb  --debug --format nested", :all_on_start => false do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
