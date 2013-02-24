@@ -16,10 +16,14 @@ html.no-js lang="en"
       .inner-section-main
 
     #main role="main"
-      section.page.container-fluid data-page="home" data-url=""
+      section.page.container-fluid data-page="page1" data-url=""
         .row-fluid
           .span2 data-view="view1" data-model="model1"
           .span10 data-view="view2" data-model="model2"
+      section.page.container-fluid data-page="page2" data-url="page2"
+        .row-fluid
+          .span3 data-view="view2" data-model="model2"
+          .span2 data-view="view1" data-model="model1"
 
       section.main
         = yield

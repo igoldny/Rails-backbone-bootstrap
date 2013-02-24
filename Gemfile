@@ -14,6 +14,8 @@ group :assets do
 end
 
 group :test, :development do
+  gem 'yajl-ruby'
+  gem 'guard-livereload'
   gem 'poltergeist'
   gem 'rb-fsevent'
   gem 'konacha'

@@ -1,8 +1,9 @@
 class MainController < ApplicationController
   def show
   end
-
   def pipe
+    res = Presenters::Response::Builder.new(params).build_response
+    #render :json => res
     respond_to do |format|
       format.json {
         render :json => {

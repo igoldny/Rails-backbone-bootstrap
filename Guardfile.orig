@@ -4,6 +4,7 @@ guard :konacha, :driver => :poltergeist, :port => 5050 do
   watch(%r{^spec/javascripts/.+_spec(\.js|\.js\.coffee)$})
 end
 
+<<<<<<< HEAD
 guard 'rspec', :cli => "--color --drb  --debug --format nested", :all_on_start => false do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
@@ -36,9 +37,9 @@ guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' }, :rspec_env => { 'RAIL
   watch('spec/spec_helper.rb') { :rspec }
   watch('test/test_helper.rb') { :test_unit }
   watch(%r{features/support/}) { :cucumber }
-end
-
+=======
 guard 'livereload' do
   watch(%r{app/views/.+\.(slim)$})
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html))).*}) { |m| "/assets/#{m[3]}" }
+>>>>>>> 5f19b93be201b8023b2eb7685152f3be96f892d6
 end
