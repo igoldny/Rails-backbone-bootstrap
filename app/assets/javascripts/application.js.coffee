@@ -2,13 +2,14 @@
 #= require ./vendor/lodash/lodash.js
 #= require ./vendor/backbone/backbone.js
 #= require handlebars
-#= require_tree ./helpers
+#= require_tree ./plugins
 
 #= require_self
 #= require_tree ./templates
 #= require_tree ./models
 #= require_tree ./views
 #= require_tree ./routers
+#= require_tree ./helpers
 
 window.FTBPro =
   Models: {}
