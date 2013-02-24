@@ -10,13 +10,9 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  gem "teabag"
 end
 
 group :test, :development do
-  gem 'yajl-ruby'
   gem 'guard-livereload'
-  gem 'poltergeist'
-  gem 'rb-fsevent'
-  gem 'konacha'
-  gem 'guard-konacha'
 end
