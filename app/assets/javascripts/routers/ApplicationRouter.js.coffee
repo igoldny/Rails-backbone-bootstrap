@@ -17,6 +17,7 @@ class FTBPro.Routers.Application extends Backbone.Router
   renderWithModelsFor: (pageViews, request, callback) ->
     $.ajax({
       url: '/pipe',
+      type: 'POST',
       data: request,
       cache: false,
     }).success((data) ->
