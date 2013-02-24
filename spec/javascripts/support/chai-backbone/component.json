@@ -1,0 +1,9 @@
+{
+  "name": "chai-backbone",
+  "version": "0.0.0",
+  "commit": "485ba9b0605119144e88de036daa3b9c8e9c161f",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matthijsgroen/chai-backbone.git"
+  }
+}
