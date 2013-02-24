@@ -5,7 +5,7 @@ module Presenters
     describe Builder do
       
       let :params do
-        {key1: :val1}
+        {model1: :val1, model2: :val2}
       end
 
       subject { Builder.new(params)}
