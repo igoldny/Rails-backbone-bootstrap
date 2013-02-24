@@ -13,6 +13,7 @@ group :assets do
 end
 
 group :test, :development do
+  gem 'guard-livereload'
   gem 'poltergeist'
   gem 'rb-fsevent'
   gem 'konacha'
