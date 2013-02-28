@@ -3,7 +3,7 @@ temp
 dist
 .sass-cache
 .tmp
-app/assets/javascripts/vendor/
+vendor/
 log/
 tmp/
 db/

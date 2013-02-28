@@ -1,6 +1,6 @@
-#= require ./vendor/jquery/jquery.js
-#= require ./vendor/lodash/lodash.js
-#= require ./vendor/backbone/backbone.js
+#= require jquery/jquery.js
+#= require lodash/lodash.js
+#= require backbone/backbone.js
 #= require handlebars
 #= require_tree ./plugins
 
