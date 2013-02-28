@@ -77,6 +77,10 @@ GEM
       childprocess (>= 0.2.3)
       guard (>= 1.1)
       spork (>= 0.8.4)
+    handlebarer (0.0.2)
+      sprockets
+      therubyracer
+      tilt
     handlebars_assets (0.12.0)
       execjs (>= 1.2.9)
       sprockets (>= 2.0.3)
@@ -85,6 +89,7 @@ GEM
     i18n (0.6.1)
     journey (1.0.4)
     json (1.7.7)
+    libv8 (3.11.8.13)
     listen (0.7.2)
     lumberjack (1.0.2)
     mail (2.4.4)
@@ -127,6 +132,7 @@ GEM
     rake (10.0.3)
     rdoc (3.12.1)
       json (~> 1.4)
+    ref (1.0.2)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
@@ -166,6 +172,9 @@ GEM
       railties (>= 3.2.5, < 5)
     temple (0.5.5)
     terminal-table (1.4.5)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -191,6 +200,7 @@ DEPENDENCIES
   guard-livereload
   guard-rspec
   guard-spork
+  handlebarer
   handlebars_assets
   rails (= 3.2.11)
   rspec

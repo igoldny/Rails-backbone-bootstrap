@@ -1,6 +1,7 @@
 #= require jquery/jquery.js
 #= require lodash/lodash.js
 #= require backbone/backbone.js
+#= require handlebars.runtime
 #= require handlebars
 #= require_tree ./plugins
 

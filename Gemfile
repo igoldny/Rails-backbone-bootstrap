@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'thin'
 gem 'slim'
 gem 'handlebars_assets'
+gem 'handlebarer'
 gem 'debugger'
 
 group :assets do
