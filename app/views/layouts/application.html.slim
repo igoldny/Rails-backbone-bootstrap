@@ -3,7 +3,7 @@ html.no-js lang="en"
   head
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
-    title= "FtbPro"
+    title FtbPro
     meta name="description" content=""
     meta name="keywords" content=""
     meta name="author" content=""
@@ -12,23 +12,4 @@ html.no-js lang="en"
     = javascript_include_tag "vendor/modernizr/modernizr.js"
     = csrf_meta_tag
   body
-    header
-      .inner-section-main
-
-    #main role="main"
-      section.page.container-fluid data-page="page1" data-url=""
-        .row-fluid
-          .span2 data-view="view1" data-model="model1"
-          .span10 data-view="view2" data-model="model2"
-      section.page.container-fluid data-page="page2" data-url="page2"
-        .row-fluid
-          .span3 data-view="view2" data-model="model2"
-          .span2 data-view="view1" data-model="model1"
-
-      section.main
-        = yield
-
-    footer
-      .inner-footer
-
-    = javascript_include_tag "application.js"
+    = yield

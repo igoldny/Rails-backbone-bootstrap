@@ -1,6 +1,8 @@
 class MainController < ApplicationController
-  def show
-  end
+  def show;end
+
+  def uikit;end
+
   def pipe
     res = Presenters::Response::Builder.new(params[:request_details]).build_response
     respond_to do |format|

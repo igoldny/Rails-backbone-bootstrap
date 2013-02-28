@@ -1,1 +1,17 @@
-show
+header
+  .inner-section-main
+
+#main role="main"
+  section.page.container-fluid data-page="page1" data-url=""
+    .row-fluid
+      .span2 data-view="view1" data-model="model1"
+      .span10 data-view="view2" data-model="model2"
+  section.page.container-fluid data-page="page2" data-url="page2"
+    .row-fluid
+      .span3 data-view="view2" data-model="model2"
+      .span2 data-view="view1" data-model="model1"
+
+footer
+  .inner-footer
+
+= javascript_include_tag "application.js"
