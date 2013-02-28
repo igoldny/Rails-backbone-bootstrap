@@ -1,0 +1,4 @@
+.post-template
+  h2 {{ title }}
+  p {{ text }}
+  a href="/" home page
