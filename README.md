@@ -15,10 +15,25 @@ This app is built on the shoulders of giants:
 * [lodash][lodash]
 * [jQuery][jquery]
 * [modernizr][modernizr]
+* [html5-boilerplate][html5-boilerplate]
+* [h5shiv][h5shiv]
+* [normalize][normalize]
 * [sass-bootstrap][sass-bootstrap]
-* [mocha][mocha]
+* [handlebars][handlebars]
 * [chai][chai]
 * [sinon][sinon]
+
+[backbone]: https://github.com/documentcloud/backbone
+[lodash]: https://github.com/bestiejs/lodash
+[jquery]: https://github.com/jquery/jquery
+[modernizr]: https://github.com/Modernizr/Modernizr
+[html5-boilerplate]: https://github.com/h5bp/html5-boilerplate
+[h5shiv]: https://github.com/aFarkas/html5shiv
+[normalize]: https://github.com/necolas/normalize.css
+[sass-bootstrap]: https://github.com/thomas-mcdonald/bootstrap-sass
+[handlebars]: https://github.com/wycats/handlebars.js
+[chai]: https://github.com/chaijs/chai
+[sinon]: https://github.com/cjohansen/Sinon.JS
 
 
 ## Contributing
