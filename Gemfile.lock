@@ -77,19 +77,20 @@ GEM
       childprocess (>= 0.2.3)
       guard (>= 1.1)
       spork (>= 0.8.4)
-    handlebarer (0.0.2)
-      sprockets
-      therubyracer
-      tilt
-    handlebars_assets (0.12.0)
-      execjs (>= 1.2.9)
-      sprockets (>= 2.0.3)
-      tilt
     hike (1.2.1)
     i18n (0.6.1)
+    jade (0.1.1)
+      execjs
+      sprockets
+      tilt
+    jader (0.0.8)
+      libv8
+      sprockets
+      therubyracer (~> 0.10.2)
+      tilt
     journey (1.0.4)
     json (1.7.7)
-    libv8 (3.11.8.13)
+    libv8 (3.3.10.4)
     listen (0.7.2)
     lumberjack (1.0.2)
     mail (2.4.4)
@@ -132,7 +133,6 @@ GEM
     rake (10.0.3)
     rdoc (3.12.1)
       json (~> 1.4)
-    ref (1.0.2)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
@@ -172,9 +172,8 @@ GEM
       railties (>= 3.2.5, < 5)
     temple (0.5.5)
     terminal-table (1.4.5)
-    therubyracer (0.11.4)
-      libv8 (~> 3.11.8.12)
-      ref
+    therubyracer (0.10.2)
+      libv8 (~> 3.3.10)
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -193,22 +192,22 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-rails (~> 3.2.1)
+  coffee-rails
   debugger
   growl
   guard
   guard-livereload
   guard-rspec
   guard-spork
-  handlebarer
-  handlebars_assets
+  jade
+  jader
   rails (= 3.2.11)
   rspec
   rspec-rails
-  sass-rails (~> 3.2.3)
+  sass-rails
   slim
   spork-rails
   sqlite3
   teabag
   thin
-  uglifier (>= 1.0.3)
+  uglifier
