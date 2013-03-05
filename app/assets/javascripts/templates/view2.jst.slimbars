@@ -1,5 +1,0 @@
-.view2-template
-  h2 {{ title }}
-  p {{ text }}
-  a href="/page2" page2
-

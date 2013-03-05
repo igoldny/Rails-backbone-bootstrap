@@ -4,24 +4,21 @@ gem 'rails', '3.2.11'
 gem 'sqlite3'
 gem 'thin'
 gem 'slim'
-gem 'handlebars_assets'
-gem 'debugger'
+gem 'jader'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
   gem "teabag"
 end
 
-group :test, :development do
-  gem 'guard-livereload'
-end
-
 group :develoment do
+  gem 'debugger'
   gem 'rspec-rails'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'guard-livereload'
 end
 
 group :test do

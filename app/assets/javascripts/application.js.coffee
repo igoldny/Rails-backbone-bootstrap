@@ -1,9 +1,8 @@
 #= require jquery/jquery.js
 #= require lodash/lodash.js
 #= require backbone/backbone.js
-#= require handlebars
 #= require_tree ./plugins
-
+#= require jade/runtime
 #= require_self
 #= require_tree ./templates
 #= require_tree ./models
